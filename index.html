@@ -11,43 +11,51 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Quiz App</title>
+    <link rel="icon" type="image/x-icon" href="/fav-con.jpg">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* body{
+            margin: 0px 0px;
+        }
+         */
+    </style>
 
 </head>
 
 <body>
+    <div class="outsi">
+        <div class="mainer container">
+            <div class="heading ">
+                <h1 class="text-center  p-1 backCustom ">QUIZ</h1>
+            </div>
 
-    <div class="mainer container">
-        <div class="heading ">
-            <h1 class="text-center  p-1 backCustom ">QUIZ</h1>
-        </div>
+            <div class="container my-5 text-center ">
 
-        <div class="container my-5 text-center ">
-            
-            <h3 class=" text-warning" id="demos"></h3>
-        </div>
+                <h5 class="bg-danger text-light " id="demos"></h5>
+            </div>
 
-        <div class="quizes my-5 row">
-            <div class="col-12 "><a href="/components/htmlQuiz.html"><button type="button"
-                        class="btn btn-success quizBtner border">HTML QUIZ</button></a></div>
-            <div class="col-12 "><a href="./components/css.html"><button type="button"
-                        class="btn btn-success quizBtner border">CSS QUIZ</button></a></div>
-            <div class="col-12"><a href="./components/js.html"><button type="button"
-                        class="btn btn-success quizBtner border">JAVASCRIPT QUIZ</button></a></div>
-            <div class="col-12"><a href="./components/bootstrap.html"><button type="button"
-                        class="btn btn-success quizBtner border">BOOTSTRAP QUIZ</button></a></div>
+            <div class="quizes my-5 row">
+                <div class="col-12 "><a href="/components/htmlQuiz.html"><button type="button"
+                            class="btn btn-warning quizBtner border butn">HTML QUIZ</button></a></div>
+                <div class="col-12 "><a href="./components/css.html"><button type="button"
+                            class="btn btn-warning quizBtner border butn">CSS QUIZ</button></a></div>
+                <div class="col-12"><a href="./components/js.html"><button type="button"
+                            class="btn btn-warning quizBtner border butn">JAVASCRIPT QUIZ</button></a></div>
+                <div class="col-12"><a href="./components/bootstrap.html"><button type="button"
+                            class="btn btn-warning quizBtner border butn">BOOTSTRAP QUIZ</button></a></div>
 
+            </div>
         </div>
     </div>
-    
-    
+
+
     <script>
         var i = 0;
         var j = 0;
         var txt = 'Welcome to Quiz World....';
         var Newtxt = 'Attemt Your Favourite Quiz Now';
         var speed = 100;
-        let demos =document.getElementById("demos");
+        let demos = document.getElementById("demos");
 
         function typeWriter() {
             if (i < txt.length) {
@@ -58,12 +66,12 @@
         }
         typeWriter()
         setInterval(() => {
-            demos.innerHTML ="";
-            demos.innerHTML =Newtxt;
+            demos.innerHTML = "";
+            demos.innerHTML = Newtxt;
             // typeNewWriter()
-            
+
         }, 3500);
-        
+
     </script>
 
     <!-- Optional JavaScript -->

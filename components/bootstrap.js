@@ -100,7 +100,10 @@ const clicked=(ans)=>{
         finalResult="FAIL ... TRY AGAIN"
     }
 
-    scoreCard.innerHTML=`<h5>${finalResult}</h5> <br><p class="text-warning"> Your score is ${scoreRight} out of ${io.length}</p>`;
+    scoreCard.innerHTML=`<h4 class="text-light bg-dark">Total Question : ${io.length}</h4>
+    <h4 class="text-success bg-dark">Correct Selected : ${scoreRight}</h4>
+    <h4 class="text-info  bg-dark">Your Score % : ${Math.round(percentAge)}</h5>
+    <h4 class="text-warning bg-dark">Remarks : ${finalResult}</h4>` ;
     
     if(index<io.length){
         firstCal()

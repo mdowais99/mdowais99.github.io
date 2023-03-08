@@ -4,12 +4,12 @@ var quiz = {
             key: 1,
             question: "Html Stands For ____________________________",
             options: [
-                "Hyper Text Makeup Language",
-                "html",
+                "Hyper Language",
+                "Html",
                 "Case Cading Style Sheet",
-                "Hypertext markup language",
+                "Hypertext Markup language",
             ],
-            correctAns: "Hypertext markup language",
+            correctAns: "Hypertext Markup language",
         },
         {
             key: 2,
@@ -37,7 +37,7 @@ var quiz = {
         {
             key: 5,
             question: "Ram Stands For _______________________",
-            options: ["Read Only Memory", "Dom", "Random Acccess Memory", "For Pc"],
+            options: ["Read Only Memory", "Dom", "Random Acccess Memory", "Npne"],
             correctAns: "Random Acccess Memory",
         },
         {
@@ -49,7 +49,7 @@ var quiz = {
                 "HTml",
                 "Read Only Memory",
             ],
-            correctAns: "Read Only Memory",
+            correctAns:"Read Only Memory",
         },
     ]
 }
@@ -112,16 +112,20 @@ const clicked=(ans)=>{
     index++;
     
     percentAge=`${(scoreRight*100)/io.length}`
-    console.log(percentAge);
+    // let percentAge = Math.round(percentAge);
+    // console.log(percentAge);
     if(percentAge>=80){
-        finalResult="APKA KNOWLEDGE KAMAL"
+        finalResult="Amazing 🥳"
     }else if(percentAge<80 && percentAge>=50){
-        finalResult="FAIR"
+        finalResult="FAIR 😊"
     }else if(percentAge<50){
-        finalResult="FAIL ... TRY AGAIN"
+        finalResult="Try Again 💔"
     }
 
-    scoreCard.innerHTML=`<h5>${finalResult}</h5> <br><p class="text-warning"> Your score is ${scoreRight} out of ${io.length}</p>`;
+    scoreCard.innerHTML=`<h4 class="text-light bg-dark">Total Question : ${io.length}</h4>
+                        <h4 class="text-success bg-dark">Correct Selected : ${scoreRight}</h4>
+                        <h4 class="text-info bg-dark">Your Score % : ${Math.round(percentAge)}</h5>
+                        <h4 class="text-warning bg-dark">Remarks : ${finalResult}</h4>`;
     
     if(index<io.length){
         firstCal()
