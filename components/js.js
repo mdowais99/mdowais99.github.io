@@ -104,7 +104,7 @@ const clicked = (ans) => {
 
     scoreCard.innerHTML = `<h4 class="text-light bg-dark">Total Question : ${io.length}</h4>
     <h4 class="text-success bg-dark">Correct Selected : ${scoreRight}</h4>
-    <h4 class="text-info bg-dark">Your Score % : ${Math.round(percentAge)}</h5>
+    <h4 class="text-info bg-dark">Your Score : ${Math.round(percentAge)}%</h5>
     <h4 class="text-warning bg-dark">Remarks : ${finalResult}</h4>`;
 
     if (index < io.length) {
