@@ -93,13 +93,13 @@ const clicked = (ans) => {
     index++;
 
     percentAge = `${(scoreRight * 100) / io.length}`
-    console.log(percentAge);
-    if (percentAge >= 80) {
-        finalResult = "APKA KNOWLEDGE KAMAL"
-    } else if (percentAge < 80 && percentAge >= 50) {
-        finalResult = "FAIR"
-    } else if (percentAge < 50) {
-        finalResult = "FAIL ... TRY AGAIN"
+    // console.log(percentAge);
+    if(percentAge>=80){
+        finalResult="Amazing 🥳"
+    }else if(percentAge<80 && percentAge>=50){
+        finalResult="FAIR 😊"
+    }else if(percentAge<50){
+        finalResult="Try Again 💔"
     }
 
     scoreCard.innerHTML = `<h4 class="text-light bg-dark">Total Question : ${io.length}</h4>
